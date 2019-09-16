@@ -169,7 +169,8 @@ srflConverter.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                                 Rates=jsonObject.get("rates").getAsJsonObject().get(to).getAsDouble();
 
                                 FinalOutput = Rates * Amount;
-                                tvFinaloutput.setText(FinalOutput + " "+to);
+                                tvFinaloutput.setText(FinalOutput + " " +
+                                        ""+to);
                             }
                         }
                     });
