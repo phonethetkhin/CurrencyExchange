@@ -23,10 +23,26 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter vpAdapter=new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpMain.setAdapter(vpAdapter);
         vpMain.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tlMain));
+        getSupportActionBar().setTitle("Central Bank Exchange Rates");
         tlMain.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 vpMain.setCurrentItem(tab.getPosition());
+String title="";
+switch (tab.getPosition())
+{
+    case 0:
+        title="Central Bank Exchange Rates";
+        break;
+    case 1:
+        title="Currency Converter";
+        break;
+    case 2:
+        title="International Exchange Rates";
+        break;
+
+}
+getSupportActionBar().setTitle(title);
             }
 
             @Override

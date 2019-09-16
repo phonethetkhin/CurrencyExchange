@@ -6,4 +6,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tiet_value">Enter Value</string>
+    <string name="btn_convert">Convert</string>
+    <string name="tv_header">Currency Converter</string>
+    <string name="tv_Noconnection">No Internet Connection! Please Check Your Network and Try Again! Swipe Down to Update New Data and Refresh</string>
 </resources>

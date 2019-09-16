@@ -36,7 +36,8 @@ public class CentralBankAdapter extends RecyclerView.Adapter<CentralBankAdapter.
 
 holder.tvCurrencyName.setText(cmodellist.get(position).getCurrencyName());
 holder.imgCountryFlag.setImageResource(cmodellist.get(position).getCountryImage());
-holder.tvRates.setText("1 "+cmodellist.get(position).getCurrencyCode()+" = "+cmodellist.get(position).getValue()+" MMK");
+holder.tvCurrencyCode.setText("1 "+cmodellist.get(position).getCurrencyCode());
+holder.tvRates.setText(cmodellist.get(position).getValue()+" MMK");
 
 
     }
@@ -48,12 +49,13 @@ holder.tvRates.setText("1 "+cmodellist.get(position).getCurrencyCode()+" = "+cmo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imgCountryFlag;
-        TextView tvCurrencyName,tvRates;
+        TextView tvCurrencyName,tvRates,tvCurrencyCode;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imgCountryFlag=itemView.findViewById(R.id.imgCountryFlag);
             tvCurrencyName=itemView.findViewById(R.id.tvCountryName);
             tvRates=itemView.findViewById(R.id.tvRates);
+            tvCurrencyCode=itemView.findViewById(R.id.tvCurrencyCode);
         }
     }
 }
