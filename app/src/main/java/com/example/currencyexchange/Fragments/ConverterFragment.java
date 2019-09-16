@@ -68,6 +68,11 @@ List<SpinnerModel> spinnerModelList=new ArrayList<>();
 if(Network())
 {
     tvNoconnetion.setVisibility(View.GONE);
+    tvHeader.setVisibility(View.VISIBLE);
+    spnCurrency1.setVisibility(View.VISIBLE);
+    spnCurrency2.setVisibility(View.VISIBLE);
+    tietValue.setVisibility(View.VISIBLE);
+    btnConvert.setVisibility(View.VISIBLE);
 
     MainFunction();
 }
@@ -88,6 +93,11 @@ srflConverter.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
         if(Network())
         {
             tvNoconnetion.setVisibility(View.GONE);
+            tvHeader.setVisibility(View.VISIBLE);
+            spnCurrency1.setVisibility(View.VISIBLE);
+            spnCurrency2.setVisibility(View.VISIBLE);
+            tietValue.setVisibility(View.VISIBLE);
+            btnConvert.setVisibility(View.VISIBLE);
 
             MainFunction();
         }
@@ -169,8 +179,7 @@ srflConverter.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                                 Rates=jsonObject.get("rates").getAsJsonObject().get(to).getAsDouble();
 
                                 FinalOutput = Rates * Amount;
-                                tvFinaloutput.setText(FinalOutput + " " +
-                                        ""+to);
+                                tvFinaloutput.setText(FinalOutput + " " +to);
                             }
                         }
                     });
